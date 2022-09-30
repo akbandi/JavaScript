@@ -97,11 +97,25 @@ function DrawBubbleChart(sampleId)
  
 }
 
-//Draw ShowMetaData
+// ShowMetaData Demographic Info
 
 function ShowMetaData(sampleId)
 {
     console.log(`ShowMetaData(${sampleId})`);
+
+    d3.json(url).then(data => {
+        let metadata = data.metadata;
+        //let sampleNames = data.names;
+        let demoPanel = d3.select("#sample-metadata").html("");
+
+        let resultArray = metadata.filter(s => s.id == sampleId);
+        let result = resultArray[0];
+
+        Object.entries(result).forEach(([key, value]) => {
+            demoPanel.append("h6").text(`${key.toUpperCase()}: ${value}`);
+        });
+
+    });
 
     
 }
