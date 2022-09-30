@@ -105,7 +105,7 @@ function ShowMetaData(sampleId)
 
     d3.json(url).then(data => {
         let metadata = data.metadata;
-        //let sampleNames = data.names;
+        
         let demoPanel = d3.select("#sample-metadata").html("");
 
         let resultArray = metadata.filter(s => s.id == sampleId);
