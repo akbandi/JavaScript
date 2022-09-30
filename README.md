@@ -1,5 +1,7 @@
 # Belly Button Biodiversity
 
+## Website url: https://akbandi.github.io/JavaScript-challenge/
+
 #### Note: Most of the code in app.js is taken from Dom's tutorial session on HW14. 
 
 ## Instructions
